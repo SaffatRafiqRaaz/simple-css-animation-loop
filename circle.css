@@ -1,0 +1,111 @@
+:root {
+  --animation-time: 2s;
+  --rcolor: red;
+  --rcolor2: green;
+  --gcolor: blue;
+  --gcolor2: pink;
+  --ycolor: orange;
+  --ycolor2: purple;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: white;
+}
+
+body {
+  display: flex;
+  padding: 0;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  flex: 1;
+}
+g {
+  box-shadow: 20px 20px 20px black;
+}
+
+@keyframes up {
+  0% {
+    cy: 41;
+    fill: var(--rcolor2);
+  }
+  25% {
+    fill: white;
+  }
+  50% {
+    cy: -200;
+    fill: var(--rcolor);
+  }
+  75% {
+    fill: white;
+  }
+  100% {
+    cy: 41;
+    fill: var(--rcolor2);
+  }
+}
+@keyframes up2 {
+  0% {
+    cy: 41;
+    fill: var(--gcolor2);
+  }
+  25% {
+    fill: white;
+  }
+  50% {
+    cy: -200;
+    fill: var(--gcolor);
+  }
+  75% {
+    fill: white;
+  }
+  100% {
+    cy: 41;
+    fill: var(--gcolor2);
+  }
+}
+@keyframes up3 {
+  0% {
+    cy: 41;
+    fill: var(--ycolor2);
+  }
+  25% {
+    fill: white;
+  }
+  50% {
+    cy: -200;
+    fill: var(--ycolor);
+  }
+  75% {
+    fill: white;
+  }
+  100% {
+    cy: 41;
+    fill: var(--ycolor2);
+  }
+}
+#red {
+  animation: up;
+  animation-duration: 2000ms;
+  animation-delay: 0ms; /* add this */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+#green {
+  animation: up2;
+  animation-duration: 2000ms;
+  animation-delay: 1332ms; /* add this */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+#yellow {
+  animation: up3;
+  animation-duration: 2000ms;
+  animation-delay: 666ms; /* add this */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
